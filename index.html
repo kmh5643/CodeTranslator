@@ -1,32 +1,11 @@
 <!doctype html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CodeTranslator</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header><div class="logo">CodeTranslator</div><span class="badge">AI Code Converter</span></header>
-<main>
-<section class="hero">
-<h1>코드를 원하는 언어로 변환하세요.</h1>
-<p>Python ↔ JavaScript 변환을 위한 CodeTranslator 1차 웹 버전</p>
-</section>
-<section class="toolbar">
-<select id="direction">
-<option value="py-js">Python → JavaScript</option>
-<option value="js-py">JavaScript → Python</option>
-</select>
-<button id="convert">변환하기</button>
-<button id="clear" class="secondary">초기화</button>
-</section>
-<section class="editors">
-<div class="panel"><div class="panel-head">입력 코드</div><textarea id="input" spellcheck="false" placeholder="여기에 코드를 입력하세요..."></textarea></div>
-<div class="panel"><div class="panel-head">변환 결과 <button id="copy">복사</button></div><textarea id="output" readonly spellcheck="false" placeholder="변환 결과가 여기에 표시됩니다."></textarea></div>
-</section>
-<p class="note">현재는 브라우저에서 동작하는 데모 변환기입니다. 다음 단계에서 실제 AI 백엔드를 연결할 수 있습니다.</p>
-</main>
-<script src="app.js"></script>
-</body>
-</html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CodeTranslator AI</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="logo">CodeTranslator <span>AI</span></div><div class="status" id="status">Demo mode</div></header>
+<main><section class="hero"><h1>코드를 자연스럽게<br>다른 언어로 변환하세요.</h1><p>Python ↔ JavaScript · AI 기반 변환 구조</p></section>
+<section class="toolbar"><select id="direction"><option value="python_to_javascript">Python → JavaScript</option><option value="javascript_to_python">JavaScript → Python</option></select>
+<button id="convert">AI로 변환하기</button><button id="clear" class="secondary">초기화</button></section>
+<section class="editors"><div class="panel"><div class="panel-head">입력 코드</div><textarea id="input" spellcheck="false" placeholder="코드를 입력하세요..."></textarea></div>
+<div class="panel"><div class="panel-head">변환 결과 <button id="copy">복사</button></div><textarea id="output" readonly spellcheck="false" placeholder="AI 변환 결과가 여기에 표시됩니다."></textarea></div></section>
+<div class="message" id="message"></div><p class="note">API 주소는 <code>app.js</code>의 API_BASE에서 설정합니다. 서버가 없으면 데모 변환으로 동작합니다.</p></main>
+<script src="app.js"></script></body></html>
